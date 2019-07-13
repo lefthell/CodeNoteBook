@@ -12,7 +12,7 @@ void FastPow::Solution()
 {
 	double a1 = myPow(2.0, 10);
 	double a2 = myPow(2.1, 3);
-	double a3 = myPow(2.0, -2);
+	double a3 = myPow(2.0, -5);
 	double a4 = myPow(1.00000, INT32_MIN);
 	std::cout << 2.0 << '\t' << 10;
 	std::cout << std::endl;
@@ -22,7 +22,7 @@ void FastPow::Solution()
 	std::cout << std::endl;
 	std::cout << a2;
 	std::cout << std::endl;
-	std::cout << 2.0 << '\t' << -2;
+	std::cout << 2.0 << '\t' << -5;
 	std::cout << std::endl;
 	std::cout << a3;
 	std::cout << std::endl;
@@ -33,24 +33,42 @@ void FastPow::Solution()
 }
 double FastPow::myPow(double x, int n)
 {
-	if (0.0 == x) return 0.0;
-
 	if (n < 0)
-	{
-		if (INT32_MIN == n)
-		{
-			return 1.0 / (myPow(x, -(n + 1))*x);
-		}
-		else
-		{
-			return 1.0 / myPow(x, -n);
-		}
-	}
-	else if (0 == n)
-	{
+		x = 1 / x;
+	return n - 2 * (n / 2) == 0 ? Pow(x*x, n / 2) : x * Pow(x*x, n / 2);
+	//if (0.0 == x)return 0.0;
+	//else if (1 == x)return 1;
+
+	//if (n<0)
+	//{
+	//	x = 1.0 / x;
+	//	if (INT32_MIN == n)
+	//	{
+	//		return (Pow(x, -(n + 1))*x);
+	//	}
+	//	else
+	//	{
+	//		return  Pow(x, -n);
+	//	}
+	//}
+	//else if (n == 0)
+	//{
+	//	return 1.0;
+	//}
+	//else
+	//{
+	//	return Pow(x, n);
+	//}
+}
+double FastPow::Pow(double x, int n)
+{
+	if (n == 0)
 		return 1;
-	}
-	else if (1 == n)
+	else if (n == 1)
+		return x;
+	else
+		return n - 2 * (n / 2) == 0 ? Pow(x*x, n / 2) : x * Pow(x*x, n / 2);
+    /*if (1 == n)
 	{
 		return x;
 	}
@@ -60,7 +78,7 @@ double FastPow::myPow(double x, int n)
 	}
 	else
 	{
-		double a = myPow(x, n >> 1);
+		double a = Pow(x, n >> 1);
 		if (1 == (n & 1))
 		{
 			return a * a * x;
@@ -69,8 +87,9 @@ double FastPow::myPow(double x, int n)
 		{
 			return a * a;
 		}
-	}
+	}*/
 }
+
 FastPow::FastPow()
 {
 

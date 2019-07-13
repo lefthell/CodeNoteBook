@@ -9,9 +9,9 @@ public:
 	std::string GetName();
 	std::string GetDesc();
 	void Solution();
-	double myPow(double x, int n);
+	//double myPow(double x, int n);
 private:
-	double MyPow(double x, int n);
-    
+	double myPow(double x, int n);
+	double Pow(double x, int n);
 };
 
