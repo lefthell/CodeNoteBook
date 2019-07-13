@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+*.ilk
+*.log
+*.tlog
+*.idb
+*.pdb
+*.ipch
+*.db
+Project/.vs/Project/v15/.suo
