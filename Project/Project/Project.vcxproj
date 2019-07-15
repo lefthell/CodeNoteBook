@@ -117,11 +117,13 @@
   <ItemGroup>
     <ClCompile Include="BaseCode.cpp" />
     <ClCompile Include="FastPow.cpp" />
+    <ClCompile Include="LongestPalindromicSubstring.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseCode.h" />
     <ClInclude Include="FastPow.h" />
+    <ClInclude Include="LongestPalindromicSubstring.h" />
     <ClInclude Include="PrintQuestion.h" />
     <ClInclude Include="QuestionHead.h" />
   </ItemGroup>

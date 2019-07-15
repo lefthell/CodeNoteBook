@@ -19,6 +19,9 @@
     <Filter Include="源文件\Question\FastPow">
       <UniqueIdentifier>{a7aba409-5acd-45f5-96f4-62f4ff4b0e2f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Question\LongestPalindromicSubstring">
+      <UniqueIdentifier>{759de7ed-a33b-49cf-8650-93168b7ee7ee}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -29,6 +32,9 @@
     </ClCompile>
     <ClCompile Include="BaseCode.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LongestPalindromicSubstring.cpp">
+      <Filter>源文件\Question\LongestPalindromicSubstring</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +49,9 @@
     </ClInclude>
     <ClInclude Include="QuestionHead.h">
       <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LongestPalindromicSubstring.h">
+      <Filter>源文件\Question\LongestPalindromicSubstring</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
