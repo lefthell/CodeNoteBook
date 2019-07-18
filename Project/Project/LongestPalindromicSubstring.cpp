@@ -16,6 +16,10 @@ std::string LongestPalindromicSubstring::GetDesc()
 
 void LongestPalindromicSubstring::Solution()
 {
+	MidTest();
+}
+void LongestPalindromicSubstring::MidTest()
+{
 	auto r = longestPalindrome("babad");
 	std::cout << "babad" << std::endl;
 	std::cout << r << std::endl;
@@ -27,7 +31,6 @@ void LongestPalindromicSubstring::Solution()
 	std::cout << "cdbbbd" << std::endl;
 	std::cout << r3 << std::endl;
 }
-
 //ÖÐÐÄÀ©É¢Ëã·¨
 int LongestPalindromicSubstring::expandAroundCenter(std::string s, int left, int right)
 {
@@ -39,7 +42,11 @@ int LongestPalindromicSubstring::expandAroundCenter(std::string s, int left, int
 	}
 	return R - L - 1;
 }
+std::string LongestPalindromicSubstring::DynamicLongestPalindrome(std::string s)
+{
 
+	return std::string();
+}
 std::string LongestPalindromicSubstring::longestPalindrome(std::string s)
 {
 	if (s.length() < 2)

@@ -11,7 +11,10 @@ public:
 	std::string GetDesc();
 	void Solution();
 
+	void MidTest();
+
 private:
 	int expandAroundCenter(std::string s, int left, int right);
+	std::string DynamicLongestPalindrome(std::string s);
 	std::string longestPalindrome(std::string s);
 };
